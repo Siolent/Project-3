@@ -1,0 +1,3 @@
+import { Injectable } from '@angular/core';import { HttpClient } from '@angular/common/http';import { Observable, map } from 'rxjs';import Papa from 'papaparse';
+export interface CsvRow{Month:string;[key:string]:string|number}
+@Injectable({providedIn:'root'})export class CsvDataService{constructor(private http:HttpClient){} loadCsv(fileName:string):Observable<CsvRow[]>{return this.http.get(`assets/data/${fileName}`,{responseType:'text'}).pipe(map(csvText=>{const parsed=Papa.parse<CsvRow>(csvText,{header:true,skipEmptyLines:true,dynamicTyping:true});return parsed.data.filter(row=>row.Month)}));}}

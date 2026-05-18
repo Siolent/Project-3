@@ -1,0 +1,7 @@
+Month,UnitsSold,OnlineSales,RetailSales,Returns,Forecast
+January,410,62000,53000,21,450
+February,455,69000,56000,19,490
+March,520,77000,63000,17,540
+April,565,83000,71000,15,590
+May,610,91000,76000,18,640
+June,670,99000,82000,14,700

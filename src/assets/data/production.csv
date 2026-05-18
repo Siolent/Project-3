@@ -1,0 +1,7 @@
+Month,UnitsProduced,DefectRate,MachineHours,Downtime,ProductionCost
+January,980,4.4,210,20,51000
+February,1090,4.0,228,18,54000
+March,1210,3.7,245,15,56500
+April,1340,3.1,262,12,59500
+May,1460,2.8,279,10,62500
+June,1580,2.4,295,8,66000

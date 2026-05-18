@@ -1,0 +1,14 @@
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter, Routes } from '@angular/router';
+import { provideServiceWorker } from '@angular/service-worker';
+import { isDevMode } from '@angular/core';
+import { AppComponent } from './app/app.component';
+import { HomeComponent } from './app/home.component';
+import { FinanceComponent } from './app/finance.component';
+import { SalesComponent } from './app/sales.component';
+import { CustomersComponent } from './app/customers.component';
+import { ProductionComponent } from './app/production.component';
+import { SupplyChainComponent } from './app/supplychain.component';
+const routes: Routes = [{ path: '', component: HomeComponent },{ path: 'finance', component: FinanceComponent },{ path: 'sales', component: SalesComponent },{ path: 'customers', component: CustomersComponent },{ path: 'production', component: ProductionComponent },{ path: 'supplychain', component: SupplyChainComponent },{ path: '**', redirectTo: '' }];
+bootstrapApplication(AppComponent,{providers:[provideRouter(routes),provideHttpClient(),provideServiceWorker('ngsw-worker.js',{enabled:!isDevMode(),registrationStrategy:'registerWhenStable:30000'})]}).catch(err=>console.error(err));

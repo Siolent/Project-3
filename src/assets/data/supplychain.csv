@@ -1,0 +1,7 @@
+Month,InventoryLevel,Shipments,SupplierDelays,TransportationCost,OrderFulfillment
+January,690,118,9,14500,84
+February,740,132,7,15800,87
+March,805,149,6,17100,89
+April,860,167,5,18400,91
+May,915,183,4,19800,93
+June,970,205,3,21400,96
